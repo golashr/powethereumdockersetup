@@ -6,9 +6,9 @@
 #
 sudo docker stop ethereum-bootnode
 sudo docker rm ethereum-bootnode
-IMGVERSION=$(head -n 1 .IMGVERSION)
+IMGVERSION=$(head -n 1 IMGVERSION)
 IMGVERSION=${IMGVERSION:-"latest"}
-IMGNAME=$(head -n 1 .IMGNAME)
+IMGNAME=$(head -n 1 IMGNAME)
 NET_ARG=
 GEN_ARG=
 #GEN_ALLOC=

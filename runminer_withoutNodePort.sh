@@ -7,9 +7,9 @@
 #./runnode.sh $NODE_NAME $RPC_PORT --mine --minerthreads=1 --etherbase="$ETHERBASE"
 ##############
 
-IMGVERSION=$(head -n 1 .IMGVERSION)
+IMGVERSION=$(head -n 1 IMGVERSION)
 IMGVERSION=${IMGVERSION:-"latest"}
-IMGNAME=$(head -n 1 .IMGNAME)
+IMGNAME=$(head -n 1 IMGNAME)
 NODE_NAME=$1
 RPC_PORT=$2
 #NODEAPP_PORT1=$3
@@ -64,4 +64,4 @@ sudo docker run -d --name $CONTAINER_NAME \
     $NET_ARG $GEN_ARG $RPC_PORTMAP $UDP_PORTMAP \
     $IMGNAME:$IMGVERSION $RPC_ARG --identity $NODE_NAME --syncmode full --cache=1024 --verbosity=4 --maxpeers=10 ${@:2}
 
-#$NET_ARG $GEN_ARG $RPC_PORTMAP $NODEAPP_PORTMAP1 $UDP_PORTMAP 
+#$NET_ARG $GEN_ARG $RPC_PORTMAP $NODEAPP_PORTMAP1 $UDP_PORTMAP

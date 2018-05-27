@@ -1,7 +1,7 @@
 #!/bin/bash
-IMGVERSION=$(head -n 1 .IMGVERSION)
+IMGVERSION=$(head -n 1 IMGVERSION)
 IMGVERSION=${IMGVERSION:-"latest"}
-IMGNAME=$(head -n 1 .IMGNAME)
+IMGNAME=$(head -n 1 IMGNAME)
 ARGPROXY=
 [[ ! -z "$http_proxy" ]] && ARGPROXY="--build-arg http_proxy=$http_proxy"
 [[ ! -z "$https_proxy" ]] && ARGPROXY="$ARGPROXY --build-arg https_proxy=$https_proxy"
